@@ -1,4 +1,4 @@
-"""Basic Tic Toe Game.Code has been rated at 9.55/10"""
+"""Basic Tic Toe Game"""
 
 board = [" "] * 9
 
@@ -89,6 +89,7 @@ while PLAY:
                 print("This position is taken! Please choose another one!")
                 player_1 = player_input()
             board = place_marker(board, "X", player_1)
+            GAME_ON = full_board_check(board)
             if win_check(board, "X"):
                 print("\nPlayer 1 wins!")
                 GAME_ON = False
